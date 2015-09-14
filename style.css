@@ -1,6 +1,6 @@
 /*----- CSS for Nav Bar ----*/
 
-li {
+li.navbar {
   display: inline;
 }
 
