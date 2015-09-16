@@ -4,10 +4,15 @@ li.navbar {
 }
 ul.navbar{
   border: 1px solid black;
+  vertical-align: middle;
 }
+
 a{
   text-decoration: none;
-  color: white;
+  color: #4099FF;
+  font-size: 32px;
+  margin-right: 15px;
+  font-family: "arial";
 }
 .link{
   color: white;
@@ -16,7 +21,7 @@ a{
   color: white;
 }
 a:hover{
-  color: black;
+  color: white;
 }
 /* ------- End CSS for Nav Bar --*/
 
@@ -30,7 +35,7 @@ a:hover{
 
 /* -------------------------*/
 .center{
-  text-align: center;
+  margin-left: 120px;
 }
 h1 {
   color:blue;
