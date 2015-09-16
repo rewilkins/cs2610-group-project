@@ -5,7 +5,6 @@ li.navbar {
 
 
 }
-
 ul.navbar{
   border: 1px solid black;
 }
@@ -17,7 +16,9 @@ a:hover{
   color: black;
 }
 
-
+.backgroundImage{
+  background-image: url(http://licei4.ucoz.ru/_nw/0/21916307.jpg);
+}
 
 
 /* -------------------------*/
