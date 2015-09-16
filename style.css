@@ -1,18 +1,13 @@
 /*----- CSS for Nav Bar ----*/
-
 li.navbar {
   display: inline;
-
-
 }
 ul.navbar{
   border: 1px solid black;
 }
-
 a{
   text-decoration: none;
   color: white;
-
 }
 .link{
   color: white;
@@ -23,6 +18,7 @@ a{
 a:hover{
   color: black;
 }
+/* ------- End CSS for Nav Bar --*/
 
 .backgroundImage{
   background-image: url(http://licei4.ucoz.ru/_nw/0/21916307.jpg);
