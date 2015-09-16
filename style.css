@@ -3,6 +3,7 @@
 li.navbar {
   display: inline;
 
+
 }
 
 ul.navbar{
@@ -20,7 +21,9 @@ a:hover{
 
 
 /* -------------------------*/
-
+.center{
+  text-align: center;
+}
 h1 {
   color:blue;
   }
