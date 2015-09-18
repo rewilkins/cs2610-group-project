@@ -37,6 +37,7 @@ a:hover{
 
 .grayBG{
   background-color: #2C3539;
+  padding: 2px;
 }
 .center{
   margin-left: 200px;
@@ -54,6 +55,7 @@ a:hover{
   height: 170px;
   background-color: #2C3539;
   color: #D1D0CE;
+  
 }
 h1 {
   color:blue;
