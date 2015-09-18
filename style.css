@@ -26,16 +26,30 @@ a:hover{
 /* ------- End CSS for Nav Bar --*/
 
 .backgroundImage{
-  background-image: url(https://s-media-cache-ak0.pinimg.com/736x/ca/d0/78/cad078ea456038edc5edd20893107420.jpg);
+  background-image: url(http://www.inferse.com/wp-content/uploads/2015/09/Instagram-super-model-algorithm.jpg);
   background-repeat: no-repeat;
-  /*background-color: #d3d3d3;*/
+  background-color: #2C3539;
 
 }
 
 
 /* -------------------------*/
+.fontStyle{
+  color: #8FD400;
+}
+.grayBG{
+  background-color: #2C3539;
+}
 .center{
-  margin-left: 120px;
+  margin-left: 200px;
+}
+.leftSpace{
+  margin-left: 20px;
+}
+
+.border{
+  border: solid #8FD400;
+  width: 470px;
 }
 h1 {
   color:blue;
