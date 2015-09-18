@@ -34,9 +34,7 @@ a:hover{
 
 
 /* -------------------------*/
-.fontStyle{
-  color: #8FD400;
-}
+
 .grayBG{
   background-color: #2C3539;
 }
@@ -46,10 +44,16 @@ a:hover{
 .leftSpace{
   margin-left: 20px;
 }
+.smallMargin{
+  margin-left: 7px;
+}
 
 .border{
-  border: solid #8FD400;
+  /*border: solid #8FD400;*/
   width: 470px;
+  height: 170px;
+  background-color: #2C3539;
+  color: #D1D0CE;
 }
 h1 {
   color:blue;
