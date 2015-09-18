@@ -6,7 +6,9 @@ ul.navbar{
   border: 1px solid black;
   vertical-align: middle;
 }
-
+.grayFill{
+  background-color: #2C3539;
+}
 a{
   text-decoration: none;
   color: #4099FF;
@@ -55,7 +57,7 @@ a:hover{
   height: 170px;
   background-color: #2C3539;
   color: #D1D0CE;
-  
+
 }
 h1 {
   color:blue;
