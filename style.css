@@ -2,27 +2,33 @@
 li.navbar {
   display: inline;
 }
+
 ul.navbar{
   border: 1px solid black;
   vertical-align: middle;
 }
+
 .grayFill{
   background-color: #2C3539;
 }
-a{
+
+a.navbar{
   text-decoration: none;
   color: #4099FF;
   font-size: 32px;
   margin-right: 15px;
   font-family: "arial";
 }
+
 .link{
   color: white;
 }
+
 .whiteFont{
   color: white;
 }
-a:hover{
+
+a.navbar:hover{
   color: gray;
 }
 /* ------- End CSS for Nav Bar --*/

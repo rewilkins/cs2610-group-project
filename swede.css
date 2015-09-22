@@ -1,22 +1,52 @@
 
-.saved-results {
+/* NAV BAR */
 
-float: right;
-color: red;
+
+/* NAV BAR */
+
+body {
+	font-family="arial";
+}
+
+ul.saved-searches {
+
+	list-style-type: none;
+}
+
+li.saved-searches {
+
+	border: solid 1px black;
+	margin: 2px;
 }
 
 .search-results {
 
-
 float: left;
-color: grey;
+}
+
+.right-side {
+
+	margin-right: 40px;
+	text-align: center;
+	float: right;
+	color: black;
+}
+
+.left-side {
+	float: left;
 }
 
 .buttons {
+	float: left;
+	padding: 5px;
+	width: 200px;
   
   
 }
 
 .forms{
+	float left;
+	padding: 5px;
+	width: 200px;
   
 }
