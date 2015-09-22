@@ -13,6 +13,13 @@ ul.saved-searches {
 	list-style-type: none;
 }
 
+a.saved-searches {
+
+
+	color black;
+	text-decoration: none;
+}
+
 li.saved-searches {
 
 	border: solid 1px black;
