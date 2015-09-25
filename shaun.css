@@ -101,21 +101,19 @@ header h1 {
 /*----Box----*/
 .box-bundle {
   margin: 50px 0;
-  /*width: 714px;
-  float: left;*/
+  float: left;
 }
 
 .box {
   background: #FFF;
-  width: 40S%;
   border: solid 1px #CCC;
   float: left;
   padding: 5px;
 }
 
 .box:nth-child(n) {
-  margin-right: 0%;
-  margin-bottom: 0%;
+  margin-right: 4%;
+  margin-bottom: 4%;
 }
 
 .box img {
