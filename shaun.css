@@ -27,7 +27,15 @@ a:hover{
 }
 
 /*----Classes----*/
-.crunch {
+.cs-bundle {
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -100px;
+  min-height: 100%;
+  position: relative;
+}
+
+.cs-crunch {
   position: relative;
   margin: 0 auto;
   padding: 0 20px;
@@ -36,19 +44,82 @@ a:hover{
   max-width: 1000px;
 }
 
-.bundle {
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -100px;
-  min-height: 100%;
-  position: relative;
+.section-inner {
+  margin: 50px 0;
+  padding: 10px;
 }
 
-/*----Body----*/
-body{
-  width: 100%;
+.cs-clear:after, .cs-crunch:after {
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
 }
-h1{
-  color: blue;
-  width: 90%;
+
+.pull--right {
+  float: right !important;
+}
+
+.pull--left {
+  float: left !important;
+}
+
+.clear {
+  display: block;
+  float: none;
+  clear: both;
+}
+
+/*----Buttons----*/
+.buttons {
+  background: #FFF;
+  border: solid 1px #CCC;
+  height: 25px;
+  text-align: center;
+  width: 75px;
+}
+
+/*----General----*/
+body {
+  background: #FFF;
+  color: #494949;
+  font-family: sans-serif;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+header {
+  border-bottom: solid 1px #CCC;
+  height: 100px;
+  margin: 0 0 10px;
+}
+header h1 {
+  line-height: 100px;
+}
+
+/*----Box----*/
+.box-bundle {
+  margin: 50px 0;
+  width: 714px;
+  float: left;
+}
+
+.box {
+  width: 48%;
+  border: solid 1px #CCC;
+  float: left;
+  padding: 5px;
+}
+
+.box:nth-child(n) {
+  margin-bottom: 2%;
+  margin-right: 2%;
+}
+.box:nth-child(3n) {
+  margin-right: 0;
+  margin-bottom: 2%;
+}
+.box img {
+  display: block;
+  margin: 0 0 10px;
+  width: 100%;
 }
