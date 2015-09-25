@@ -75,9 +75,11 @@ a.navbar:hover{
   border-radius: 2px;
 
 }
+
 h1 {
   color:blue;
   }
   button:hover{
     background-color: #127596;
+    color: #2C3539;
   }
