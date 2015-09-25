@@ -30,7 +30,7 @@ a:hover{
 .bundle {
   height: auto !important;
   height: 100%;
-  margin-bottom: -100px;
+  margin-bottom: 100px;
   min-height: 100%;
   position: relative;
 }
@@ -99,25 +99,22 @@ header h1 {
 /*----Box----*/
 .box-bundle {
   margin: 50px 0;
-  width: 714px;
-  float: left;
+  /*width: 714px;
+  float: left;*/
 }
 
 .box {
-  width: 48%;
+  width: 40S%;
   border: solid 1px #CCC;
   float: left;
   padding: 5px;
 }
 
 .box:nth-child(n) {
-  margin-bottom: 2%;
-  margin-right: 2%;
+  margin-right: 0%;
+  margin-bottom: 0%;
 }
-.box:nth-child(3n) {
-  margin-right: 0;
-  margin-bottom: 2%;
-}
+
 .box img {
   display: block;
   margin: 0 0 10px;
