@@ -81,14 +81,16 @@ a:hover{
 
 /*----General----*/
 body {
-  background: #FFF;
-  color: #494949;
+  background: #DEDEDE;
+  color: #FFF;
   font-family: sans-serif;
   height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 header {
-  border-bottom: solid 1px #CCC;
+  background: #2C3539;
+  color: #FFF;
+  border-bottom: solid 1px #2C3539;
   height: 100px;
   margin: 0 0 10px;
 }
@@ -104,6 +106,7 @@ header h1 {
 }
 
 .box {
+  background: #FFF;
   width: 40S%;
   border: solid 1px #CCC;
   float: left;
