@@ -27,7 +27,7 @@ a:hover{
 }
 
 /*----Classes----*/
-.cs-bundle {
+.bundle {
   height: auto !important;
   height: 100%;
   margin-bottom: -100px;
@@ -35,7 +35,7 @@ a:hover{
   position: relative;
 }
 
-.cs-crunch {
+.crunch {
   position: relative;
   margin: 0 auto;
   padding: 0 20px;
@@ -49,7 +49,7 @@ a:hover{
   padding: 10px;
 }
 
-.cs-clear:after, .cs-crunch:after {
+.clear:after, .crunch:after {
   display: block;
   font-size: 0;
   content: " ";
@@ -71,7 +71,7 @@ a:hover{
 }
 
 /*----Buttons----*/
-.buttons {
+.btn {
   background: #FFF;
   border: solid 1px #CCC;
   height: 25px;
