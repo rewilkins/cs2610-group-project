@@ -48,7 +48,14 @@ a.navbar:hover{
   padding: 2px;
 }
 .center{
-  margin-left: 200px;
+  margin-left: 180px;
+  background-color: #4099FF;
+  background-image: none;
+  width: 100px;
+  height: 50px;
+  color: white;
+  border-radius: 15px;
+
 }
 .leftSpace{
   margin-left: 20px;
@@ -63,8 +70,14 @@ a.navbar:hover{
   height: 170px;
   background-color: #2C3539;
   color: #D1D0CE;
+  margin-left: 40px;
+  margin-top: 70px;
+  border-radius: 2px;
 
 }
 h1 {
   color:blue;
+  }
+  button:hover{
+    background-color: #127596;
   }
