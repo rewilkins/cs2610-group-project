@@ -76,6 +76,7 @@ body {
 	padding: 10px; 
 } 
 
+
 .buttons {
 	background: #FFF;
 	border: solid 1px #CCC;
@@ -83,6 +84,7 @@ body {
 	text-align: center;
 	width: 95px;
 }
+
 
 .save {
 	width: 100px;
@@ -123,7 +125,7 @@ body {
 }
 
 
-.clear {
+.clear:after {
   display: block;
   font-size: 0;
   content: " ";
