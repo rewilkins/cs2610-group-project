@@ -82,6 +82,7 @@ body {
 
 .save {
 	width: 100px;
+
 }
 
 .search {
@@ -109,8 +110,10 @@ body {
 
 .link {
 	color: black;
-	font-size: 20px;
-	padding: 10px;
+	line-height: 1em;
+	font-size: 23px;
+	padding: 8px;
+	display: block;
 }
 
 
