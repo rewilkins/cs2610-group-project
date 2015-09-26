@@ -28,7 +28,7 @@ a:hover{
 }
 
 
-/* NAV BAR */
+/* END NAV BAR */
 
 body {
 	font-family="arial";
@@ -70,16 +70,12 @@ float: left;
 }
 
 .buttons {
-	float: left;
-	padding: 5px;
-	width: 200px;
+	float: right;
 
 
 }
 
 .forms{
 	float left;
-	padding: 5px;
-	width: 200px;
 
 }
