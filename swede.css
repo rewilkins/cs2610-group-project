@@ -1,4 +1,5 @@
 
+
 /* NAV BAR */
 
 .navbar {
@@ -129,5 +130,11 @@ body {
   display: block;
   font-size: 0;
   content: " ";
+  clear: both;
+}
+
+.clear {
+  display: block;
+  float: none;
   clear: both;
 }
