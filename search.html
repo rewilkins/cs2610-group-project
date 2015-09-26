@@ -6,6 +6,8 @@
 		<meta name="charset" content="utf-8">
 		<meta name="description" content="Look for other posts">
 		<link rel="stylesheet" type="text/css" href="swede.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="search.js"></script>
 
 	</head>
 
@@ -21,13 +23,16 @@
 
 		<div class="searches">
 			<div>
-			Enter hashtags below to search for any related posts.
+			Place your search terms below to find all related posts.
+			</div>
+			<div class="error-message">
+
 			</div>
 
 			<div class="input-wrapper clear">
 				<input class="text-field" type="text" name="query" placeholder="">
-				<button class ="buttons left-side search" type="button">Search</button>
-				<button class ="buttons left-side save" type="button">Save</button>
+				<input class ="buttons left-side search" type="submit" value="Search">
+				<input class ="buttons left-side save" type="submit" value="Save">
 				
 			</div>
 

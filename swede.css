@@ -125,6 +125,14 @@ body {
 	display: block;
 }
 
+.error {
+	border: solid 2px red;
+}
+
+.error-message {
+	color: red;
+}
+
 
 .clear:after {
   display: block;
