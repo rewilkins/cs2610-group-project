@@ -5,7 +5,9 @@
   <title> Profile </title>
     <meta name="charset" content="utf-8">
     <meta name="description" content="Pictures, Likes, Comments">
-    <link rel="stylesheet" href="Rob.css">
+    <link rel="stylesheet" href="shaun.css">
+    <link rel="stylesheet" type="text/css" href="Rob.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
@@ -18,6 +20,7 @@
       </div>
     </header>
 
+<!-- NavBar -->
     <div class="grayFill">
       <ul class="navbar">
         <li class="navbar"><a href="https://instagram.com/"><image src="http://www.cityofboston.gov/images_documents/instagram40_tcm3-36282.png" alt="Twitter"></a></image></li>
@@ -27,23 +30,58 @@
       </ul>
     </div>
 
-        <!--Profile Picture-->
-    <div class="profilePic">
-      <img src="http://placehold.it/300x200" />
-    </div>
-    <!--End Profile Picture-->
     
-    <!--Name-->
-    <div class="profileName"
-      <form method="post" action="">
-        <input type="text" name="query" placeholder="Name">
-        <!--<textarea name="Name" cols="36" rows="1">
-          Name
-        </textarea><br>-->
-      <input type="submit" value="Save" />
-      </form>
+    
+    <div class="centered">
+      <!--Profile Picture-->
+      <div class="profilePic">
+        <img src="http://placehold.it/300x200"/>
+      </div>
+      <!--End Profile Picture-->
     </div>
-    <!--End Name-->
+    
+    
+    
+    <div class="rounded">
+      <div class="centered">
+        <!--Name-->
+        <div class="profileName"
+          <form method="post" action="">
+            <input type="text" class="rounded" name="query" placeholder="Name">
+          </form>
+        </div>
+        <!--End Name-->
+        
+        <!--email-->
+        <div class="profileEmail"
+          <form method="post" action="">
+            <input type="text" class="rounded" name="query" placeholder="Email">
+          </form>
+        </div>
+        <!--End email-->
+        
+        <!--Bio-->
+        <div class="profileBio"
+          <form method="post" action="">
+            <textarea name="Bio" class="rounded" cols="36" rows="10">Bio
+            </textarea><br>
+          </form>
+        </div>
+        <!--End Bio-->
+      </div>
+    </div>
+    
+    
+    
+    <!--save button-->
+    <a href="">
+      <button class = "center">
+         Save
+      </button>
+    </a>
+    
+    
+  
 
     <div class="push"></div>
 
@@ -51,3 +89,10 @@
 
 </body>
 </html>
+
+
+
+
+
+
+

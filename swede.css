@@ -1,35 +1,3 @@
-
-
-/* NAV BAR */
-
-.navbar {
-	width: 50%;
-}
-
-li.navbar {
-  display: inline;
-}
-ul.navbar{
-  vertical-align: middle;
-}
-.grayFill{
-  background-color: #2C3539;
-}
-a{
-  text-decoration: none;
-  color: #4099FF;
-  font-size: 32px;
-  margin-right: 15px;
-  font-family: "arial";
-}
-
-a:hover{
-  color: gray;
-}
-
-
-/* END NAV BAR */
-
 /* SEARCH IMAGES */
 
 .box {
