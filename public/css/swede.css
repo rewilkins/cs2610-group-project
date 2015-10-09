@@ -1,0 +1,116 @@
+/* SEARCH IMAGES */
+
+.box {
+  background: #FFF;
+  border: solid 1px #CCC;
+  float: left;
+  padding: 5px;
+}
+
+.box:nth-child(n) {
+  margin-right: 4%;
+  margin-bottom: 4%;
+}
+
+.box img {
+  display: block;
+  margin: 0 0 10px;
+  width: 100%;
+}
+
+/* END SEARCH IMAGES */
+
+/* GENERIC PAGE */
+
+body {
+	font-family="arial";
+	background: #DEDEDE;
+	color: #FFF;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+.right-side {
+	float: right;
+}
+
+.left-side {
+	float: left;
+}
+
+/* END GENERIC PAGE */
+
+.input-wrapper { 
+	float: left;
+	padding: 10px; 
+} 
+
+
+.buttons {
+	background: #FFF;
+	border: solid 1px #CCC;
+	line-height: 25px;
+	text-align: center;
+	width: 95px;
+}
+
+
+.save {
+	width: 100px;
+
+}
+
+.search {
+	margin-right: 5px;
+	width: 100px;
+}
+
+.text-field{
+	border: solid 1px #CCC;
+	float: left;
+	height: 25px;
+	margin-right: 5px;
+}
+
+.searches {
+	color: black;
+	float: left;
+	width: 900px;
+}
+
+.saved-searches {
+	float: left;
+	list-style-type: none;
+	color: black;
+}
+
+
+.link {
+	color: black;
+	line-height: 1em;
+	font-size: 23px;
+	padding: 8px;
+	display: block;
+}
+
+.error {
+	border: solid 2px red;
+}
+
+.error-message {
+	color: red;
+}
+
+
+.clear:after {
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+}
+
+.clear {
+  display: block;
+  float: none;
+  clear: both;
+}
