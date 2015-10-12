@@ -15,6 +15,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRoutes)
 app.use('/user', userRoutes)
 
+app.use('/index', loginRoute)
+
 app.listen(port)
 
 console.log('Server running at http:127.0.0.1:' + port + '/')
