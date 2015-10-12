@@ -4,6 +4,8 @@ var express 				= require('express')
   , port     				= 3000
 	// , indexRoutes			= require('./routes/index')
 	, userRoutes			= require('./routes/userRoutes')
+	, loginRoute			= require('./routes/loginRoute')
+
 
 var app = express();
 
@@ -14,6 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', indexRoutes)
 app.use('/user', userRoutes)
+app.use('/login', loginRoute)
 
 app.listen(port)
 
