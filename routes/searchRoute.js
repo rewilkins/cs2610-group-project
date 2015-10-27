@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/search', function(req, res) {
+console.log('got here')
   res.render('search', {
-		// layout: 'auth_base',
-    title: 'User Dashboard!'
+		 layout: 'baseSearch',
   })
 })
 
