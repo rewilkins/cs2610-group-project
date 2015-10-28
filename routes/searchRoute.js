@@ -4,8 +4,8 @@ var router = express.Router();
 router.get('/', function(req, res) {
 
   res.render('search', {
-		 layout: 'baseSearch',
-     title: 'Search'
+	 title: 'Search'
+
   })
 })
 

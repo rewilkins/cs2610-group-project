@@ -6,6 +6,8 @@ var express 				= require('express')
 	, userRoute			= require('./routes/userRoute')
 	, loginRoute			= require('./routes/loginRoute')
 	, searchRoute			= require('./routes/searchRoute')
+	, dashboardRoute	= require('./routes/dashboardRoute')
+	, profileRoute	= require('./routes/profileRoute')
 
 var app = express();
 
@@ -19,6 +21,8 @@ app.use('/user', userRoute)
 app.use('/dashboard', indexRoute)
 app.use('/login', loginRoute)
 app.use('/search', searchRoute)
+app.use('/dashboard', dashboardRoute)
+app.use('/profile', profileRoute)
 
 app.listen(port)
 
