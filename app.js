@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRoute)
 app.use('/user', userRoute)
-app.use('/dashboard', indexRoute)
+app.use('/index', indexRoute)
 app.use('/login', loginRoute)
 app.use('/search', searchRoute)
 app.use('/dashboard', dashboardRoute)
