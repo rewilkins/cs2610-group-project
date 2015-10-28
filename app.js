@@ -7,6 +7,7 @@ var express 				= require('express')
 	, loginRoute			= require('./routes/loginRoute')
 	, searchRoute			= require('./routes/searchRoute')
 	, dashboardRoute	= require('./routes/dashboardRoute')
+	, profileRoute	= require('./routes/profileRoute')
 
 
 var app = express();
@@ -20,6 +21,7 @@ app.use('/user', userRoute)
 app.use('/login', loginRoute)
 app.use('/search', searchRoute)
 app.use('/dashboard', dashboardRoute)
+app.use('/profile', profileRoute)
 
 app.use(express.static(path.join(__dirname, 'public')));
 
