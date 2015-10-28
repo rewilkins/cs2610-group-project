@@ -1,9 +1,9 @@
 var express= require('express');
 var router = express.Router();
 
-router.get('/index', function(req, res){
+router.get('/', function(req, res){
   res.render('dashboard',{
-    layout: 'index',
+    layout: 'auth_base',
     title: ' Login ',
 
   })
