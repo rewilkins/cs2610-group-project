@@ -21,7 +21,7 @@ a.navbar{
 }
 
 .link{
-  color: white;
+  color: black;
 }
 
 .whiteFont{
@@ -77,7 +77,7 @@ a.navbar:hover{
 }
 
 h1 {
-  color:blue;
+  color: #4099FF;
   }
   button:hover{
     background-color: #127596;
