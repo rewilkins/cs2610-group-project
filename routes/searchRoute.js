@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/search', function(req, res) {
-console.log('got here')
+router.get('/', function(req, res) {
+console.log('Got it!')
   res.render('search', {
-		 layout: 'baseSearch',
+
   })
 })
 
