@@ -9,6 +9,7 @@ var express 				= require('express')
 	, dashboardRoute	= require('./routes/dashboardRoute')
 	, profileRoute	= require('./routes/profileRoute')
 	, bodyParser		= require('body-parser')
+	, request				= require('request')
 
 var app = express();
 
