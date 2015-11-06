@@ -1,25 +1,82 @@
 var express 				= require('express')
-	, exphbs			= require('express-handlebars')
-	, path				= require('path')
-	, request 		= require('request')
-	, querystring = require('querystring')
-	, session     = require('express-session')
-	, cfg         = require('./config')
-	, port     			= 3000
+	, exphbs					= require('express-handlebars')
+	, request 				= require('request')
+	, bodyParser			= require('body-parser')
+	, querystring 		= require('querystring')
+	, session     		= require('express-session')
+	, path						= require('path')
+	, cfg         		= require('./config')
 	, indexRoute			= require('./routes/indexRoute')
-	, userRoute			= require('./routes/userRoute')
+	, userRoute				= require('./routes/userRoute')
 	, searchRoute			= require('./routes/searchRoute')
 	, dashboardRoute	= require('./routes/dashboardRoute')
-	, profileRoute	= require('./routes/profileRoute')
-	, bodyParser		= require('body-parser')
-	, request				= require('request')
+	, profileRoute		= require('./routes/profileRoute')
+	, port     				= 3000
 
 var app = express();
 
 app.engine('handlebars', exphbs({defaultLayout: 'base'}));
 app.set('view engine', 'handlebars');
 
-app.use(bodyParser.urlencoded({ extended: false }))
+// New session for user
+app.use(session({
+  cookieName: 'session',
+  secret: 'something',
+  resave: false,
+  saveUninitialized: true
+}))
+
+app.get('/login', function(req, res) {
+// created a new object
+	var qs = {
+	client_id: cfg.client_id,
+	redirect_uri: cfg.redirect_uri,
+	response_type: 'code'
+	}
+
+	var query = querystring.stringify(qs)
+
+	var url = 'https://api.instagram.com/oauth/authorize/?' + query
+
+	res.redirect(url)
+})
+
+app.get('/auth/finalize', function(req, res) {
+var post_data = {
+	client_id: cfg.client_id,
+	client_secret: cfg.client_secret,
+	redirect_uri: cfg.redirect_uri,
+	grant_type: 'authorization_code',
+	code: req.query.code
+}
+
+	var options = {
+		url: 'https://api.instagram.com/oauth/access_token',
+		form: post_data
+	}
+
+	//for dashboard
+	request.post(options, function(error, response, body) {
+		var data = JSON.parse(body)
+		req.session.access_token = data.access_token
+		res.redirect('/dashboard')
+	})
+})
+
+app.get('/dashboard', function(req, res) {
+  var options = {
+    url: 'https://api.instagram.com/v1/users/self/feed/?access_token=' + req.session.access_token
+  }
+
+  request.get(options, function(error, response, body) {
+    var feed = JSON.parse(body)
+
+    res.render('dashboard', {
+      feed: feed.data
+    })
+  })
+})
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
