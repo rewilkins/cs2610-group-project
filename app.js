@@ -1,6 +1,10 @@
 var express 				= require('express')
 	, exphbs			= require('express-handlebars')
 	, path				= require('path')
+	, request 		= require('request')
+	, querystring = require('querystring')
+	, session     = require('express-session')
+	, cfg         = require('./config')
 	, port     			= 3000
 	, indexRoute			= require('./routes/indexRoute')
 	, userRoute			= require('./routes/userRoute')
