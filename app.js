@@ -63,6 +63,7 @@ var post_data = {
 	})
 })
 
+	//for dashboard
 app.get('/dashboard', function(req, res) {
   var options = {
     url: 'https://api.instagram.com/v1/users/self/feed/?access_token=' + req.session.access_token
