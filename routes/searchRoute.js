@@ -2,10 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.render('search', {
-    title: 'Search'
-
-  })
+  //console.log(req.session.access_token)
+  if(req.session.access_token == null){
+      res.render('index', {
+      title: 'Home'
+    })
+  }
+  else{
+    res.render('search', {
+      title: 'Search'
+    })
+  }
 })
 
 module.exports = router
