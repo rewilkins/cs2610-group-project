@@ -41,7 +41,7 @@ app.get('/login', function(req, res) {
   res.redirect(url)
 })
 
-app.get('/auth/finalize', function(req, res) {
+app.get('/auth/finalize', function(req, res, next) {
   
   if(req.query.error == 'access_denied'){  // must validate like this or hackers can get in
 		return res.redirect('/')  // return 'last line of code' will terminate the function at that line of code
@@ -66,10 +66,7 @@ app.get('/auth/finalize', function(req, res) {
 	req.session.access_token = data.access_token
 	res.redirect('/dashboard')
   })
-})
 
-	//for dashboard
-app.get('/dashboard', function(req, res, next) {
   var options = {
     url: 'https://api.instagram.com/v1/users/self/feed/?access_token=' + req.session.access_token
   }
