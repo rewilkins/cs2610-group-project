@@ -78,8 +78,8 @@ app.get('/dashboard', function (req, res, next){
   request.get(options, function(error, response, body) {
 	
 	if (error) {
-	  console.log("error if 1")
-	  return next(error)
+		console.log("error if 1")
+		return next(error)
 	  }
 	try {
 	  var feed = JSON.parse(body)
@@ -93,7 +93,7 @@ app.get('/dashboard', function (req, res, next){
 
 	if (feed.meta.code > 200) {
 	  console.log("error code above 200")
-	  return next(feed.meta.error_message)
+		return next(feed.meta.error_message)
 	  }
 	
     res.render('dashboard', {
