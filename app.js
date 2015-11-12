@@ -6,8 +6,6 @@ var express 			= require('express')
 	, session     		= require('express-session')
 	, path				= require('path')
 	, cfg         		= require('./config')
-	, indexRoute		= require('./routes/indexRoute')
-	, userRoute			= require('./routes/userRoute')
 	, searchRoute		= require('./routes/searchRoute')
 	, dashboardRoute	= require('./routes/dashboardRoute')
 	, profileRoute		= require('./routes/profileRoute')
@@ -25,6 +23,11 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+
+app.get("/", function(req, res){
+  req.session.access_token = null
+  res.render('index', {layout: 'login'})
+});
 
 app.get('/login', function(req, res) {
 // created a new object
@@ -74,9 +77,6 @@ app.get('/auth/finalize', function(req, res) {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRoute)
-app.use('/user', userRoute)
-app.use('/index', indexRoute)
 app.use('/search', searchRoute)
 app.use('/dashboard', dashboardRoute)
 app.use('/profile', profileRoute)
