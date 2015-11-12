@@ -3,11 +3,8 @@ var request = require('request');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  //console.log(req.session.access_token)
   if(req.session.access_token == null){
-      res.render('index', {
-      title: 'Home'
-    })
+      res.redirect('localhost:3000/')
   }
   else{
 
@@ -17,12 +14,10 @@ router.get('/', function(req, res, next) {
   
     request.get(options, function(error, response, body) {
       
-      console.log(body)
-      
       if (error) {
-          console.log("error if 1")
-          return next(error)
-        }
+        console.log("error if 1")
+        return next(error)
+      }
       try {
         var feed = JSON.parse(body)
       }
@@ -45,6 +40,5 @@ router.get('/', function(req, res, next) {
     })
   }
 })
-
 
 module.exports = router
