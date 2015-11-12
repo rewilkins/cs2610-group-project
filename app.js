@@ -41,7 +41,7 @@ app.get('/login', function(req, res) {
   res.redirect(url)
 })
 
-app.get('/auth/finalize', function(req, res, next) {
+app.get('/auth/finalize', function(req, res) {
   
   if(req.query.error == 'access_denied'){  // must validate like this or hackers can get in
 		return res.redirect('/')  // return 'last line of code' will terminate the function at that line of code
@@ -66,24 +66,35 @@ app.get('/auth/finalize', function(req, res, next) {
 	req.session.access_token = data.access_token
 	res.redirect('/dashboard')
   })
+})
 
+
+app.get('/dashboard', function (req, res, next){
+  
   var options = {
     url: 'https://api.instagram.com/v1/users/self/feed/?access_token=' + req.session.access_token
   }
 
   request.get(options, function(error, response, body) {
 	
-	if (error) {return next(error)}
+	if (error) {
+	  console.log("error if 1")
+	  return next(error)
+	  }
 	try {
 	  var feed = JSON.parse(body)
 	}
     catch(err){
+	  console.log("error if 2")
 	  // return error if what we get back is HTML code
 	  return next(err) // displays the error on the page
 	  // return res.reditect('/') // just redirects to homepage
 	}
 
-	if (feed.meta.code > 200) {return next(feed.meta.error_message)}
+	if (feed.meta.code > 200) {
+	  console.log("error code above 200")
+	  return next(feed.meta.error_message)
+	  }
 	
     res.render('dashboard', {
       feed: feed.data
