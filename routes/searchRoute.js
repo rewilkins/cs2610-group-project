@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
       })
     } else {
 
-      query = 'snow'
+      query = 'guns'
 
       var options = {
         url: 'https://api.instagram.com/v1/tags/' + query + '/media/recent?access_token=' + req.session.access_token + '&count=21'
