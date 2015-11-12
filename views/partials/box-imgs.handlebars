@@ -1,61 +1,9 @@
-<!-- <div class="box-bundle clear">
-
-  <div class="box">
-    <img src="http://placehold.it/250x150" alt=""/>
-    <div class="group-btn clear">
-      <button class="btn pull--left">Like</button>
-      <button class="btn pull--right">Comment</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="http://placehold.it/250x150" alt=""/>
-    <div class="group-btn clear">
-      <button class="btn pull--left">Like</button>
-      <button class="btn pull--right">Comment</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="http://placehold.it/250x150" alt=""/>
-    <div class="group-btn clear">
-      <button class="btn pull--left">Like</button>
-      <button class="btn pull--right">Comment</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="http://placehold.it/250x150" alt=""/>
-    <div class="group-btn clear">
-      <button class="btn pull--left">Like</button>
-      <button class="btn pull--right">Comment</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="http://placehold.it/250x150" alt=""/>
-    <div class="group-btn clear">
-      <button class="btn pull--left">Like</button>
-      <button class="btn pull--right">Comment</button>
-    </div>
-  </div>
-
-  <div class="box">
-    <img src="http://placehold.it/250x150" alt=""/>
-    <div class="group-btn clear">
-      <button class="btn pull--left">Like</button>
-      <button class="btn pull--right">Comment</button>
-    </div>
-  </div>
-
-</div> -->
-
-
-<div class="box">
+<div class="box-bundle clear">
   {{#each feed}}
     <img src="{{this.images.standard_resolution.url}}" alt="" />
     <div class="group-btn clear">
       <button class="btn pull--left">Likes: {{this.likes.count}}</button>
       <button class="btn pull--right">Comments: {{this.comments.count}}</button>
   {{/each}}
+</div>
 </div>

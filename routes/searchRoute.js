@@ -4,8 +4,6 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
 
-    console.log('search')
-    console.log(req.session.access_token)
 
     if (req.session.access_token == null) {
       res.render('index', {
@@ -13,8 +11,10 @@ router.get('/', function(req, res) {
       })
     } else {
 
+      query = 'snow'
+
       var options = {
-        url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
+        url: 'https://api.instagram.com/v1/tags/' + query + '/media/recent?access_token=' + req.session.access_token + '&count=21'
 
       }
 
@@ -22,9 +22,11 @@ router.get('/', function(req, res) {
 
         var results = JSON.parse(body)
 
+        console.log(results.data)
+
         res.render('search', {
           title: 'Search',
-          body: results.data
+          feed: results.data
 
         })
       })
