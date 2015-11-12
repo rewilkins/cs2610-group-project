@@ -110,6 +110,8 @@ header h1 {
   border: solid 1px #CCC;
   float: left;
   padding: 5px;
+  height: 150px;
+  width: 250px;
 }
 
 .box:nth-child(n) {
