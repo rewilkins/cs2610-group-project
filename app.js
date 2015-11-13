@@ -9,6 +9,7 @@ var express 			 = require('express')
 	, searchRoute		 = require('./routes/searchRoute')
 	, dashboardRoute = require('./routes/dashboardRoute')
 	, profileRoute	 = require('./routes/profileRoute')
+//	, loginCheck     = require('./routes/loginCheck')
 	, port     			 = 3000
 
 var app = express();
@@ -25,8 +26,8 @@ app.use(session({
 }))
 
 app.get("/", function(req, res){
-  req.session.access_token = null
-  res.render('index', {layout: 'login'})
+  if (req.session.access_token != null){res.redirect('localhost:3000/')}
+  res.render('login', {layout: 'login', title:"Home - Login to Access your Instagram "})
 });
 
 app.get('/login', function(req, res) {
@@ -43,6 +44,7 @@ app.get('/login', function(req, res) {
 
   res.redirect(url)
 })
+
 
 app.get('/auth/finalize', function(req, res) {
 
@@ -69,6 +71,11 @@ app.get('/auth/finalize', function(req, res) {
 	req.session.access_token = data.access_token
 	res.redirect('/dashboard')
   })
+})
+
+app.get('/logout', function(req, res){
+	res.render('logout', {layout:'login', title:'You have successfully Logged out of instagram'})
+	req.session.access_token = null
 })
 
 app.use(express.static(path.join(__dirname, 'public')));
