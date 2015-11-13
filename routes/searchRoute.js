@@ -46,7 +46,8 @@ router.get('/', function(req, res, next) {
 
         res.render('search', {
           title: 'Search',
-          feed: feed.data
+          feed: feed.data,
+          search_query: SEARCH_QUERY
         })
       })
     }
@@ -56,7 +57,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res) {
   SEARCH_QUERY = req.body.query
 
-  res.redirect('/search')
+  return res.redirect('/search')
 
 })
 
