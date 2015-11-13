@@ -1,9 +1,9 @@
-<div class="box-bundle clear">
-  {{#each feed}}
-    <img src="{{this.images.standard_resolution.url}}" alt="" />
+{{#each feed}}
+  <div class="box">
+    <img src="{{this.images.standard_resolution.url}}" alt=""/>
     <div class="group-btn clear">
       <button class="btn pull--left">Likes: {{this.likes.count}}</button>
       <button class="btn pull--right">Comments: {{this.comments.count}}</button>
-  {{/each}}
-</div>
-</div>
+    </div>
+  </div>
+{{/each}}

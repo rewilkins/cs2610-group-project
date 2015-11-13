@@ -8,10 +8,10 @@ router.get('/', function(req, res) {
   }
   else {
 
-    query = 'guns'
+    query = 'preschool'
 
     var options = {
-      url: 'https://api.instagram.com/v1/tags/' + query + '/media/recent?access_token=' + req.session.access_token + '&count=21'
+      url: 'https://api.instagram.com/v1/tags/' + query + '/media/recent?access_token=' + req.session.access_token + '&count=9'
 
     }
 
@@ -30,12 +30,12 @@ router.get('/', function(req, res) {
         return next(err) // displays the error on the page
         // return res.reditect('/') // just redirects to homepage
       }
-    
+
       if (feed.meta.code > 200) {
         console.log("error code above 200")
         return next(feed.meta.error_message)
       }
-    
+
       res.render('search', {
         title: 'Search',
         feed: feed.data
