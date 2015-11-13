@@ -26,7 +26,7 @@ app.use(session({
 
 app.get("/", function(req, res){
   req.session.access_token = null
-  res.render('index', {layout: 'login', title:"Home - Login to Access your Instagram "})
+  res.render('login', {layout: 'login', title:"Home - Login to Access your Instagram "})
 });
 
 app.get('/login', function(req, res) {
