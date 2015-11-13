@@ -1,25 +1,28 @@
-<div class="searches">
-	<div>
-		Place your search terms below to find all related posts.
-	</div>
-	<div class="error-message">
+	<div class="searches">
+		<div class="instruction">
+			Place your search terms below to find all related posts.
+		</div>
+		<div class="error-message">
+
+		</div>
+
+		<div class="input-wrapper clear">
+			<form action="/search" method="post">
+				<input class="text-field" type="text" name="query" value="{{{search_query}}}">
+				<input class="buttons left-side search" type="submit" value="Search">
+				<input class="buttons left-side save" type="submit" value="Save">
+			</form>
+		</div>
+
+		<div class="left-side clear">
+			{{>box-imgs}}
+		</div>
 
 	</div>
 
-	<div class="input-wrapper clear">
-		<form action="/search" method="post">
-			<input class="text-field" type="text" name="query" value="{{{search_query}}}">
-			<input class="buttons left-side search" type="submit" value="Search">
-			<input class="buttons left-side save" type="submit" value="Save">
-		</form>
-	</div>
-
-	<div class="left-side clear">
-		{{>box-imgs}}
-	</div>
 
 	<ul class="saved-searches">
-		<li>Saved searches:</li>
+		<li><h3>Saved searches:<h3></li>
 		<li><a class="link" href="#">#linux</a></li>
 		<li><a class="link" href="#">#programming</a></li>
 		<li><a class="link" href="#">#stuff</a></li>
@@ -27,4 +30,3 @@
 		<li><a class="link" href="#">#usu</a></li>
 		<li><a class="link" href="#">#html</a></li>
 	</ul>
-</div>
