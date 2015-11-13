@@ -26,8 +26,9 @@ app.use(session({
 }))
 
 app.get("/", function(req, res){
-  if (req.session.access_token != null){res.redirect('localhost:3000/')}
-  res.render('login', {layout: 'login', title:"Home - Login to Access your Instagram "})
+	req.session.access_token = null
+	res.render('login', {layout: 'login'
+  })
 });
 
 app.get('/login', function(req, res) {
