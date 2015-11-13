@@ -1,0 +1,126 @@
+/*----- CSS for Nav Bar ----*/
+li.navbar {
+  display: inline;
+}
+ul.navbar{
+  border: 1px solid black;
+  vertical-align: middle;
+}
+.grayFill{
+  background-color: #2C3539;
+}
+a{
+  text-decoration: none;
+  color: #4099FF;
+  font-size: 32px;
+  margin-right: 15px;
+  font-family: "arial";
+}
+.link{
+  color: black;
+}
+.whiteFont{
+  color: white;
+}
+a:hover{
+  color: gray;
+}
+
+/*----Classes----*/
+.bundle {
+  height: auto !important;
+  height: 100%;
+  margin-bottom: 100px;
+  min-height: 100%;
+  position: relative;
+}
+
+.crunch {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.section-inner {
+  margin: 50px 0;
+  padding: 10px;
+}
+
+.clear:after, .crunch:after {
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+}
+
+.pull--right {
+  float: right !important;
+}
+
+.pull--left {
+  float: left !important;
+}
+
+.clear {
+  display: block;
+  float: none;
+  clear: both;
+}
+
+/*----Buttons----*/
+.btn {
+  background: #FFF;
+  border: solid 1px #CCC;
+  height: 25px;
+  text-align: center;
+  width: 75px;
+}
+
+/*----General----*/
+body {
+  background: #DEDEDE;
+  color: #FFF;
+  font-family: sans-serif;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+header {
+  background: #2C3539;
+  color: #FFF;
+  border-bottom: solid 1px #2C3539;
+  height: 100px;
+  margin: 0 0 10px;
+}
+header h1 {
+  line-height: 100px;
+}
+
+/*----Box----*/
+.box-bundle {
+  margin: 50px 0;
+  float: left;
+}
+
+.box {
+  background: #FFF;
+  border: solid 1px #CCC;
+  float: left;
+  padding: 5px;
+  height: 150px;
+  width: 250px;
+}
+
+.box:nth-child(n) {
+  margin-right: 4%;
+  margin-bottom: 4%;
+}
+
+.box img {
+  display: block;
+  margin: 0 0 10px;
+  width: 100%;
+}
