@@ -1,5 +1,6 @@
 var express = require('express');
 var request = require('request');
+var body_parser = require('body-parser')
 var router = express.Router();
 var SEARCH_QUERY = ''
 
@@ -53,9 +54,7 @@ router.get('/', function(req, res, next) {
 })
 
 router.post('/', function(req, res) {
-  var input_data = req.body
-  SEARCH_QUERY = input_data.query
-  console.log('new query: ', SEARCH_QUERY)
+  SEARCH_QUERY = req.body.query
 
   res.redirect('/search')
 

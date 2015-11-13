@@ -9,6 +9,7 @@ var express 			 = require('express')
 	, searchRoute		 = require('./routes/searchRoute')
 	, dashboardRoute = require('./routes/dashboardRoute')
 	, profileRoute	 = require('./routes/profileRoute')
+//	, loginCheck     = require('./routes/loginCheck')
 	, port     			 = 3000
 
 var app = express();
@@ -21,20 +22,16 @@ app.use(session({
   cookieName: 'session',
   secret: 'something',
   resave: false,
-  saveUninitialized: true,
-	temp_access: session.access_token
+  saveUninitialized: true
 }))
 
-app.get("/", function(req, res){
-	if (req.session.access_token != null){res.redirect('/dashboard')}
-	else {res.render('login', {layout: 'login'})}
-});
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
 
-app.get('/logout', function(req, res){
-	req.session.access_token = null
-	//res.render('logout', {layout:'login', title:'You have successfully Logged out of instagram'})
-	res.redirect('/')
-})
+app.get("/", function(req, res){
+  if (req.session.access_token != null){res.redirect('localhost:3000/')}
+  res.render('login', {layout: 'login', title:"Home - Login to Access your Instagram "})
+});
 
 app.get('/login', function(req, res) {
 // created a new object
@@ -43,12 +40,6 @@ app.get('/login', function(req, res) {
 	redirect_uri: cfg.redirect_uri,
 	response_type: 'code'
   }
-
-app.use('', function(req, res){ // This function checks if we still have the correct accessd token
-		if(temp_access != req.session.access_token ){
-			res.redirect('/')
-		}
-	})
 
   var query = querystring.stringify(qs)
 
@@ -83,6 +74,11 @@ app.get('/auth/finalize', function(req, res) {
 	req.session.access_token = data.access_token
 	res.redirect('/dashboard')
   })
+})
+
+app.get('/logout', function(req, res){
+	res.render('logout', {layout:'login', title:'You have successfully Logged out of instagram'})
+	req.session.access_token = null
 })
 
 app.use(express.static(path.join(__dirname, 'public')));
