@@ -1,85 +1,129 @@
+
 /*----- CSS for Nav Bar ----*/
 li.navbar {
   display: inline;
 }
-
 ul.navbar{
   border: 1px solid black;
   vertical-align: middle;
 }
-
 .grayFill{
   background-color: #2C3539;
 }
-
-a.navbar{
+a{
   text-decoration: none;
   color: #4099FF;
   font-size: 32px;
   margin-right: 15px;
   font-family: "arial";
 }
-
 .link{
   color: black;
 }
-
 .whiteFont{
   color: white;
 }
-
-a.navbar:hover{
+a:hover{
   color: gray;
 }
-/* ------- End CSS for Nav Bar --*/
 
-.backgroundImage{
-  background-image: url(http://www.inferse.com/wp-content/uploads/2015/09/Instagram-super-model-algorithm.jpg);
-  background-repeat: no-repeat;
-  background-color: #2C3539;
-
+/*----Classes----*/
+.bundle {
+  height: auto !important;
+  height: 100%;
+  margin-bottom: 100px;
+  min-height: 100%;
+  position: relative;
 }
 
-
-/* -------------------------*/
-
-.grayBG{
-  background-color: #2C3539;
-  padding: 2px;
-}
-.center{
-  margin-left: 180px;
-  background-color: #4099FF;
-  background-image: none;
-  width: 100px;
-  height: 50px;
-  color: white;
-  border-radius: 15px;
-
-}
-.leftSpace{
-  margin-left: 20px;
-}
-.smallMargin{
-  margin-left: 7px;
+.crunch {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  text-align: center;
 }
 
-.border{
-  /*border: solid #8FD400;*/
-  width: 470px;
-  height: 170px;
-  background-color: #2C3539;
-  color: #D1D0CE;
-  margin-left: 40px;
-  margin-top: 70px;
-  border-radius: 2px;
-
+.section-inner {
+  margin: 50px 0;
+  padding: 10px;
 }
 
-h1 {
-  color: #125688;
-  }
-  button:hover{
-    background-color: #125688;
-    color: #2C3539;
-  }
+.clear:after, .crunch:after {
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+}
+
+.pull--right {
+  float: right !important;
+}
+
+.pull--left {
+  float: left !important;
+}
+
+.clear {
+  display: block;
+  float: none;
+  clear: both;
+}
+
+/*----Buttons----*/
+.btn {
+  background: #FFF;
+  border: solid 1px #CCC;
+  height: 25px;
+  text-align: center;
+  width: 110px;
+}
+
+/*----General----*/
+body {
+  background: #DEDEDE;
+  color: #FFF;
+  font-family: sans-serif;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+header {
+  background: #2C3539;
+  color: #FFF;
+  border-bottom: solid 1px #2C3539;
+  height: 100px;
+  margin: 0 0 10px;
+}
+header h1 {
+  line-height: 100px;
+}
+
+/*----Box----*/
+.box-bundle {
+  margin: 50px 0;
+  float: left;
+}
+
+.box {
+  background: #FFF;
+  border: solid 1px #CCC;
+  float: left;
+  padding: 5px;
+  margin: 10px;
+  height: 250px;
+  width: 250px;
+}
+
+.box:nth-child(n) {
+  margin-right: 3%;
+  margin-bottom: 3%;
+}
+
+.box img {
+  display: block;
+  margin: 0 0 10px;
+  width: 100%;
+  height: 100%;
+}
