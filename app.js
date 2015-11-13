@@ -1,15 +1,15 @@
-var express 			= require('express')
-	, exphbs			= require('express-handlebars')
-	, request 			= require('request')
-	, bodyParser		= require('body-parser')
-	, querystring 		= require('querystring')
-	, session     		= require('express-session')
-	, path				= require('path')
-	, cfg         		= require('./config')
-	, searchRoute		= require('./routes/searchRoute')
-	, dashboardRoute	= require('./routes/dashboardRoute')
-	, profileRoute		= require('./routes/profileRoute')
-	, port     			= 3000
+var express 			 = require('express')
+	, exphbs			   = require('express-handlebars')
+	, request 			 = require('request')
+	, bodyParser		 = require('body-parser')
+	, querystring 	 = require('querystring')
+	, session     	 = require('express-session')
+	, path			  	 = require('path')
+	, cfg         	 = require('./config')
+	, searchRoute		 = require('./routes/searchRoute')
+	, dashboardRoute = require('./routes/dashboardRoute')
+	, profileRoute	 = require('./routes/profileRoute')
+	, port     			 = 3000
 
 var app = express();
 
@@ -45,11 +45,11 @@ app.get('/login', function(req, res) {
 })
 
 app.get('/auth/finalize', function(req, res) {
-  
+
   if(req.query.error == 'access_denied'){  // must validate like this or hackers can get in
 		return res.redirect('/')  // return 'last line of code' will terminate the function at that line of code
   }
-  
+
   var post_data = {
 	client_id: cfg.client_id,
 	client_secret: cfg.client_secret,
@@ -70,10 +70,6 @@ app.get('/auth/finalize', function(req, res) {
 	res.redirect('/dashboard')
   })
 })
-
-
-
-
 
 app.use(express.static(path.join(__dirname, 'public')));
 
