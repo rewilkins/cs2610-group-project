@@ -74,6 +74,18 @@ a:hover{
   background-image: url(https://wallpaperscraft.com/image/instagram_logo_symbol_social_site_social_network_92819_1920x1080.jpg);
   height: 400px;
 }
+.sigBtn{
+  background: #00aced;
+  color: #ffffff;
+  border: solid 1px #CCC;
+  height: 25px;
+  text-align: center;
+  width: 110px;
+  border-radius: 7px;
+}
+.sigBtn:hover{
+  background: #125688;
+}
 /*----Buttons----*/
 .btn {
   background: #FFF;
