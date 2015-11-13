@@ -43,7 +43,9 @@ app.get('/login', function(req, res) {
 
   res.redirect(url)
 })
-
+app.get('/logout', function(req, res){
+	res.render('logout', {layout:'login', title:'You have successfully Logged out of instagram'})
+})
 app.get('/auth/finalize', function(req, res) {
 
   if(req.query.error == 'access_denied'){  // must validate like this or hackers can get in
