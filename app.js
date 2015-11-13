@@ -9,7 +9,6 @@ var express 			 = require('express')
 	, searchRoute		 = require('./routes/searchRoute')
 	, dashboardRoute = require('./routes/dashboardRoute')
 	, profileRoute	 = require('./routes/profileRoute')
-//	, loginCheck     = require('./routes/loginCheck')
 	, port     			 = 3000
 
 var app = express();
@@ -74,8 +73,8 @@ app.get('/auth/finalize', function(req, res) {
 })
 
 app.get('/logout', function(req, res){
-	res.render('logout', {layout:'login', title:'You have successfully Logged out of instagram'})
 	req.session.access_token = null
+	res.render('logout', {layout:'login', title:'You have successfully Logged out of instagram'})
 })
 
 app.use(express.static(path.join(__dirname, 'public')));
