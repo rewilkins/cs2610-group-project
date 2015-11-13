@@ -21,7 +21,8 @@ app.use(session({
   cookieName: 'session',
   secret: 'something',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+	temp_access: session.access_token
 }))
 
 app.get("/", function(req, res){
@@ -42,6 +43,12 @@ app.get('/login', function(req, res) {
 	redirect_uri: cfg.redirect_uri,
 	response_type: 'code'
   }
+
+app.use('', function(req, res){ // This function checks if we still have the correct accessd token
+		if(temp_access != req.session.access_token ){
+			res.redirect('/')
+		}
+	})
 
   var query = querystring.stringify(qs)
 
