@@ -25,10 +25,15 @@ app.use(session({
 }))
 
 app.get("/", function(req, res){
-	req.session.access_token = null
-	res.render('login', {layout: 'login'
-  })
+	if (req.session.access_token != null){res.redirect('/dashboard')}
+	else {res.render('login', {layout: 'login'})}
 });
+
+app.get('/logout', function(req, res){
+	req.session.access_token = null
+	//res.render('logout', {layout:'login', title:'You have successfully Logged out of instagram'})
+	res.redirect('/')
+})
 
 app.get('/login', function(req, res) {
 // created a new object
@@ -71,11 +76,6 @@ app.get('/auth/finalize', function(req, res) {
 	req.session.access_token = data.access_token
 	res.redirect('/dashboard')
   })
-})
-
-app.get('/logout', function(req, res){
-	req.session.access_token = null
-	res.render('logout', {layout:'login', title:'You have successfully Logged out of instagram'})
 })
 
 app.use(express.static(path.join(__dirname, 'public')));
