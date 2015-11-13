@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 
 
       var options = {
-        url: 'https://api.instagram.com/v1/tags/' + SEARCH_QUERY + '/media/recent?access_token=' + req.session.access_token + '&count=9'
+        url: 'https://api.instagram.com/v1/tags/' + SEARCH_QUERY + '/media/recent?access_token=' + req.session.access_token + '&count=21'
 
       }
       console.log(options.url)
