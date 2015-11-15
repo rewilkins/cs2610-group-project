@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
       res.redirect('localhost:3000/')
   }
   else{
-
     var options = {
       url: 'https://api.instagram.com/v1/users/self/?access_token=' + req.session.access_token
     }
