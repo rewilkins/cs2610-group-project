@@ -8,7 +8,8 @@ var express = require('express'),
   cfg = require('./config'),
   searchRoute = require('./routes/searchRoute'),
   dashboardRoute = require('./routes/dashboardRoute'),
-  profileRoute = require('./routes/profileRoute')
+  profileRoute = require('./routes/profileRoute'),
+  db = require('./db')
   //	, loginCheck     = require('./routes/loginCheck')
   ,
   port = 3000
@@ -34,7 +35,7 @@ app.use(bodyParser.json());
 app.get("/", function(req, res) {
   if (req.session.access_token != null) {
     res.redirect('/dashboard')
-  }else{
+  } else {
     res.render('login', {
       layout: 'login',
       title: "Home"
@@ -95,6 +96,13 @@ app.use('/search', searchRoute)
 app.use('/dashboard', dashboardRoute)
 app.use('/profile', profileRoute)
 
-app.listen(port)
-
-console.log('Server running at http:127.0.0.1:' + port + '/')
+db.connect('mongodb://dbuser:password@ds055574.mongolab.com:55574/testing', function(err) {
+  if (err) {
+    console.log('Unable to connect to Mongo.')
+    process.exit(1)
+  } else {
+    app.listen(3000, function() {
+      console.log('Listening on port 3000...')
+    })
+  }
+})
