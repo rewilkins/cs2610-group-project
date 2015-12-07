@@ -8,7 +8,7 @@
     "express-handlebars": "~2.0.1",
     "express-session": "^1.12.1",
     "handlebars": "^4.0.3",
-    "mongo": "^0.1.0"
+    "mongodb": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {
