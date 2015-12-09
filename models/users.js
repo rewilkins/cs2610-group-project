@@ -1,4 +1,3 @@
-var ObjectId = require('mongodb').ObjectId
 var assert = require('assert')
 var db = require('../db')
 
@@ -19,7 +18,7 @@ exports.find = function(id, callback) {
   // Get the users collection
   var collection = db.get().collection('users')
   // Find a user
-  collection.findOne({'_id': ObjectId(id)}, function(err, document) {
+  collection.findOne({'_id': id}, function(err, document) {
     assert.equal(err, null)
     console.log('Found 1 user document')
     callback(document)

@@ -57,6 +57,8 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res) {
   SEARCH_QUERY = req.body.query
 
+
+
   return res.redirect('/search')
 
 })

@@ -9,9 +9,8 @@ var express = require('express'),
   searchRoute = require('./routes/searchRoute'),
   dashboardRoute = require('./routes/dashboardRoute'),
   profileRoute = require('./routes/profileRoute'),
-  db = require('./db')
-  //	, loginCheck     = require('./routes/loginCheck')
-  ,
+  db = require('./db'),
+  Users = require('./models/users'),
   port = 3000
 
 var app = express();
@@ -85,8 +84,23 @@ app.get('/auth/finalize', function(req, res) {
   //for dashboard
   request.post(options, function(error, response, body) {
     var data = JSON.parse(body)
+    var user = data.user
+
     req.session.access_token = data.access_token
-    res.redirect('/dashboard')
+    req.session.userId = data.user.id
+
+    user._id = user.id
+    delete user.id
+
+    Users.find(user._id, function(document) {
+      if (!document) {
+        Users.insert(user, function(result) {
+          res.redirect('/dashboard')
+        })
+      } else {
+        res.redirect('/dashboard')
+      }
+    })
   })
 })
 
