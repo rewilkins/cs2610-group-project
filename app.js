@@ -96,7 +96,7 @@ app.use('/search', searchRoute)
 app.use('/dashboard', dashboardRoute)
 app.use('/profile', profileRoute)
 
-db.connect('mongodb://dbuser:password@ds055574.mongolab.com:55574/testing', function(err) {
+db.connect('mongodb://db_user:qwefasfieq@ds027415.mongolab.com:27415/insta_app', function(err) {
   if (err) {
     console.log('Unable to connect to Mongo.')
     process.exit(1)
