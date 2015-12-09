@@ -8,7 +8,18 @@ var SEARCH_QUERY = ''
 router.post('/', function(req, res) {
   SEARCH_QUERY = req.body.query
 
-  // add 
+  // add
+  console.log('here')
+
+  Users.update(user._id, function(document) {
+    if (!document) {
+      Users.insert(user, function(result) {
+        res.redirect('/search')
+      })
+    } else {
+      res.redirect('/search')
+    }
+  })
 
   return res.redirect('/search')
 
