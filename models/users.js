@@ -25,11 +25,11 @@ exports.find = function(id, callback) {
   })
 }
 
-exports.update = function(id, callback) {
+exports.update = function(user, callback) {
   // Get the users collection
   var collection = db.get().collection('users')
   // Update the user
-  collection.update({'_id': id}, user, function(err, result) {
+  collection.update({'_id': user._id}, user, function(err, result) {
     assert.equal(err, null)
     assert.equal(1, result.result.n)
     console.log('Updated 1 document in the users collection')
