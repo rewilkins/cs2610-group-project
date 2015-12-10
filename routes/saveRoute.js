@@ -12,11 +12,15 @@ router.post('/', function(req, res) {
   id = req.session.userId
 
   Users.find(id, function(document) {
-      document.tags = SEARCH_QUERY 
-      Users.update(document, function(document) {
+    if (!document) {
+      res.redirect('/search')
+    } else {
+      document.tags = SEARCH_QUERY
+      Users.appendTags(document, function(document) {
 
         res.redirect('/search')
       })
+    }
   })
 })
 

@@ -24,6 +24,17 @@ exports.find = function(id, callback) {
     callback(document)
   })
 }
+exports.appendTags = function(user, callback) {
+  // Get the users collection
+  var collection = db.get().collection('users')
+  // Update the user
+  collection.update({'_id': user._id}, {$addToSet: {'tags': user.tags}}, function(err, result) {
+    assert.equal(err, null)
+    assert.equal(1, result.result.n)
+    console.log('Updated 1 document in the users collection')
+    callback()
+  })
+}
 
 exports.update = function(user, callback) {
   // Get the users collection
