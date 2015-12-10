@@ -22,7 +22,6 @@ router.get('/', function(req, res, next) {
         url: 'https://api.instagram.com/v1/tags/' + SEARCH_QUERY + '/media/recent?access_token=' + req.session.access_token + '&count=21'
 
       }
-      console.log(options.url)
 
       request.get(options, function(error, response, body) {
 
