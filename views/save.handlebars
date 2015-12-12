@@ -1,0 +1,13 @@
+
+<ul class="saved-searches">
+	<li>
+		<h3>Saved searches:
+			<h3>
+	</li>
+	{{#each tags}}
+	 <li>
+     <a class="link" href="#{{this}}">#{{this}}</a>
+		 <input class="save" type="submit" formaction="/save" value="Delete">
+   </li>
+	{{/each}}
+</ul>
