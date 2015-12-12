@@ -31,7 +31,7 @@ router.post('/', function(req, res) {
         document.tags = SEARCH_QUERY
         Users.appendTags(document, function(document) {
 
-          res.redirect('/search')
+          res.redirect('/save')
         })
       }
     })
