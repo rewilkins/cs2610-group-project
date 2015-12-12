@@ -10,6 +10,7 @@ var express = require('express'),
   dashboardRoute = require('./routes/dashboardRoute'),
   profileRoute = require('./routes/profileRoute'),
   saveRoute = require('./routes/saveRoute'),
+  deleteRoute = require('./routes/deleteRoute'),
   db = require('./db'),
   Users = require('./models/users'),
   port = 3000
@@ -111,6 +112,7 @@ app.use('/search', searchRoute)
 app.use('/dashboard', dashboardRoute)
 app.use('/profile', profileRoute)
 app.use('/save', saveRoute)
+app.use('/delete', deleteRoute)
 
 db.connect('mongodb://db_user:qwefasfieq@ds027415.mongolab.com:27415/insta_app', function(err) {
   if (err) {

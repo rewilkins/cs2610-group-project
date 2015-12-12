@@ -18,7 +18,7 @@ exports.find = function(id, callback) {
   var collection = db.get().collection('users')
   // Find a user
   collection.findOne({'_id': id}, function(err, document) {
-    console.log(document)
+    //console.log(document)
     assert.equal(err, null)
     callback(document)
   })
@@ -28,6 +28,17 @@ exports.appendTags = function(user, callback) {
   var collection = db.get().collection('users')
   // Update the user
   collection.update({'_id': user._id}, {$addToSet: {'tags': user.tags}}, function(err, result) {
+    assert.equal(err, null)
+    assert.equal(1, result.result.n)
+    callback()
+  })
+}
+
+exports.deleteTag = function(id, tag, callback) {
+  // Get the users collection
+  var collection = db.get().collection('users')
+  // Update the user
+  collection.update({'_id': id}, {$pull: {'tags': tag}}, function(err, result) {
     assert.equal(err, null)
     assert.equal(1, result.result.n)
     callback()

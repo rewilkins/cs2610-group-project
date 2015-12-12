@@ -12,31 +12,30 @@ router.get('/', function(req, res) {
     if (!document) {
       res.redirect('/search')
     } else {
-      document.tags = SEARCH_QUERY
-
-        res.render('save', {
-          tags: document.tags
-        })
+      res.render('save', {
+        tags: document.tags
+      })
     }
   })
 })
 
 router.post('/', function(req, res) {
-  SEARCH_QUERY = req.body.query
+    SEARCH_QUERY = req.body.query
 
-  id = req.session.userId
+    id = req.session.userId
 
-  Users.find(id, function(document) {
-    if (!document) {
-      res.redirect('/search')
-    } else {
-      document.tags = SEARCH_QUERY
-      Users.appendTags(document, function(document) {
-
+    Users.find(id, function(document) {
+      if (!document) {
         res.redirect('/search')
-      })
-    }
+      } else {
+        document.tags = SEARCH_QUERY
+        Users.appendTags(document, function(document) {
+
+          res.redirect('/search')
+        })
+      }
+    })
   })
-})
+
 
 module.exports = router
