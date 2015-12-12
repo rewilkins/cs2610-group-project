@@ -1,0 +1,25 @@
+<script>
+
+  function delete_tag(val)
+  {
+      console.log(val);
+      form.submit();
+  }
+</script>
+
+
+<ul class="saved-searches">
+	<li>
+		<h3>Saved searches:
+			<h3>
+	</li>
+	{{#each tags}}
+   <form method="post" action="/delete">
+	 <div>
+     <label class="tags" href="#{{this}}" name="which-tag" style="display: inline-block">#{{this}}
+       <button name="tag" class="save" value="{{this}}">Delete</button>
+     </label>
+   </div>
+ </form>
+	{{/each}}
+</ul>
