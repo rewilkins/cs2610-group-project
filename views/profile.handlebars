@@ -1,6 +1,12 @@
 <div class="profileData">
 <div class="userPic">
-{{feed.username}}
+
+
+<div>
+<form method="post" action="http://127.0.0.1:3000/profile">
+
+
+<input type="text" class="rounded" name="username" value="{{feed.username}}">
 
 <p>
   <img src="{{feed.profile_picture}}"/>
@@ -11,21 +17,20 @@
 
 
 <!--Name-->
-<div class="profileName"
-  <form method="post" action="">
-    <input type="text" class="rounded" name="query" placeholder="{{feed.full_name}}">
-  </form>
+<div class="profileName">
+
+    <input type="text" class="rounded" name="full_name" value="{{feed.full_name}}">
+ 
 </div>
 <!--End Name-->
 
 
 
 <!--Bio-->
-<div class="profileBio"
-  <form method="post" action="">
-    <textarea name="Bio" class="rounded" cols="36" rows="10">{{feed.bio}}
-    </textarea><br>
-  </form>
+<div class="profileBio">
+
+ <input type="text" class="rounded" name="bio" value="{{feed.bio}}">
+
 </div>
 <!--End Bio-->
 
@@ -33,10 +38,10 @@
 
 
 <!--Website-->
-<div class="profileName"
-  <form method="post" action="">
-    <input type="text" class="rounded" name="query" placeholder="">
-  </form>
+<div class="profileName">
+
+    <input type="text" class="rounded" name="website" value="{{feed.website}}">
+
 </div>
 <!--End Website-->
 
@@ -44,9 +49,13 @@
 
 
 <!--save button-->
-<a href="">
-  <button class = "sigBtn">
+
+
+  <button type="submit" formaction="/profile" class = "sigBtn">
      Save
   </button>
-</a>
+
+
+
+</form>
 </div>
